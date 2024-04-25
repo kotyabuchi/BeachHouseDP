@@ -1,0 +1,1 @@
+execute if entity @s[tag=beer_server] run function beach_house:removal/beer_server

@@ -1,0 +1,1 @@
+execute as @e[predicate=beach_house:is_clicked_interaction, dx=0, dy=0, dz=0] on target run tp @s ~ ~ ~

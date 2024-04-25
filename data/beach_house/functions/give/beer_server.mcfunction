@@ -1,0 +1,1 @@
+give @s minecraft:item_frame{EntityTag:{Fixed:true,Silent:true,Tags:[beer_server,machine]},CanPlaceOn:[dark_oak_planks],CustomModelData:4,type:placeable}

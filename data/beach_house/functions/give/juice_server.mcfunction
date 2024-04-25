@@ -1,0 +1,1 @@
+give @s minecraft:item_frame{EntityTag:{Fixed:true,Silent:true,Tags:["juice_server","machine"]},CustomModelData:5,type:placeable}
