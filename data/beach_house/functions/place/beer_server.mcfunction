@@ -1,1 +1,1 @@
-summon minecraft:item_display ~0.5 ~0.5 ~0.5 {Tags:[beer_server, machine, not_set_direction],item:{Count:1,id:"minecraft:item_frame",tag:{CustomModelData:4}}}
+summon minecraft:item_display ~0.5 ~0.5 ~0.5 {Tags:[beer_server, machine, not_set_direction],item:{count:1, id:"minecraft:item_frame", components:{"minecraft:custom_model_data":4}}}

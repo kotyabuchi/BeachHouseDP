@@ -22,6 +22,6 @@
     }
   },
   "rewards": {
-    "function": "beach_house:place/place_machines"
+    "function": "beach_house:place/check_can_place"
   }
 }
