@@ -3,7 +3,7 @@
     "entity": "this",
     "predicate": {
       "type": "minecraft:interaction",
-      "nbt": "{Tags:[beer_server_tap]}"
+      "nbt": "{Tags:[cooler_box,interaction]}"
     }
   }
   

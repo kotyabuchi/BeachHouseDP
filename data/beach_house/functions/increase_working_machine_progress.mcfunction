@@ -1,0 +1,1 @@
+execute as @e[predicate=beach_house:machines/is_working_machine] run scoreboard players add @s progress 1

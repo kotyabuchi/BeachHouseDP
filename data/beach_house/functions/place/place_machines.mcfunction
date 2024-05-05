@@ -1,15 +1,7 @@
-tag @s add placer
-execute store result score @s direction run data get entity @s Rotation[0]
-scoreboard players operation @s direction += FloorAngle direction
-scoreboard players operation @s direction /= Direction direction
-scoreboard players operation @s direction *= Direction direction
-scoreboard players operation @s direction += Reverse direction
+execute if entity @e[predicate=beach_house:is_mechine_frame, tag=beer_server] run function beach_house:place/beer_server
+execute if entity @e[predicate=beach_house:is_mechine_frame, tag=juice_server] run function beach_house:place/juice_server
+execute if entity @e[predicate=beach_house:is_mechine_frame, tag=griddle] run function beach_house:place/griddle
+execute if entity @e[predicate=beach_house:is_mechine_frame, tag=cooler_box] run function beach_house:place/cooler_box
 
-execute as @e[type=item_frame, tag=machine, tag=beer_server] at @s align xyz run function beach_house:place/beer_server
-execute as @e[type=item_frame, tag=machine, tag=juice_server] at @s align xyz run function beach_house:place/juice_server
-execute as @e[type=item_frame, tag=machine, tag=griddle] at @s align xyz run function beach_house:place/griddle
-execute as @e[type=item_frame, tag=machine, tag=cooler_box] at @s align xyz run function beach_house:place/cooler_box
-
-execute as @e[type=item_display, tag=not_set_direction] at @s run function beach_house:set_direction
-
-tag @s remove placer
+execute as @e[predicate=beach_house:is_not_setup, tag=half] at @s run function beach_house:set_half_machine
+execute as @e[predicate=beach_house:is_not_setup] run tag @s remove not_setup

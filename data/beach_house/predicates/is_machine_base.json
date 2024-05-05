@@ -2,8 +2,8 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "type": "minecraft:interaction",
-      "nbt": "{Tags:[beer_server_interaction]}"
+      "type": "minecraft:item_display",
+      "nbt": "{Tags:[machine_base]}"
     }
   }
   
