@@ -1,0 +1,1 @@
+give @s minecraft:potion[minecraft:item_name='{"text": "コーラ"}',minecraft:lore=['["",{"text":"冷えたコーラ","italic":false,"color":"gray"}]'],minecraft:hide_additional_tooltip={},minecraft:custom_data={type:coke},minecraft:custom_model_data=4]
