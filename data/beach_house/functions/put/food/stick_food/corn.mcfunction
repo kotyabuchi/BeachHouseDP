@@ -1,1 +1,0 @@
-summon item_display ~ ~ ~ {Tags:[food, stick_food, corn, not_setup], item:{count:1, id:"minecraft:apple", components:{"minecraft:custom_model_data":14}}, transformation:{right_rotation:{axis:[1f,0f,0f],angle:-1.5708f},scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}

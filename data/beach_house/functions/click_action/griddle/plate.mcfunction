@@ -8,8 +8,9 @@ execute as @e[predicate=beach_house:machines/griddle/is_griddle_plate, tag=click
 execute as @e[predicate=beach_house:machines/griddle/is_griddle_plate, tag=clicked_with_stick_food] at @s positioned ^ ^0.06 ^ unless entity @e[tag=stick_food, distance=..0.1] run function beach_house:click_action/griddle/grill_food/put_stick_food
 # まだ左で焼いていない
 execute as @e[predicate=beach_house:machines/griddle/is_griddle_plate, tag=clicked_with_stick_food] at @s positioned ^-0.25 ^0.06 ^ unless entity @e[tag=stick_food, distance=..0.1] run function beach_house:click_action/griddle/grill_food/put_stick_food
+
 # 向き変更
-execute as @e[tag=not_setup, tag=stick_food] at @s run execute store result entity @s Rotation[0] float 1 run data get entity @e[tag=clicked_with_stick_food, sort=nearest, limit=1] Rotation[0] 1
+execute as @e[tag=food, tag=not_setup] at @s run execute store result entity @s Rotation[0] float 1 run data get entity @e[predicate=beach_house:machines/griddle/is_griddle_plate, sort=nearest, limit=1] Rotation[0] 1
 
 execute as @e[tag=food, tag=not_setup] at @s run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 0.8
 execute as @e[tag=food, tag=not_setup] at @s run particle minecraft:white_smoke ~ ~0.1 ~ 0.15 0 0.15 0 5 force @a
