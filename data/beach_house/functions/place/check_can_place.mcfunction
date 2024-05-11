@@ -22,11 +22,11 @@ execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is
 execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] unless block ~ ~ ~ air run function beach_house:place/result/can_not_place_in_block
 
 # 設置済みチェック
-execute at @e[predicate=beach_house:is_machine_base] align xyz if entity @e[type=item_display, tag=machine, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
+execute at @e[predicate=beach_house:is_machine_base] align xyz if entity @e[predicate=beach_house:is_displayed_machine, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
 execute unless entity @s[tag=failed_place] at @e[predicate=beach_house:is_machine_base] align xyz if entity @e[predicate=beach_house:is_machine_part, tag=!not_setup, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
 # 横長の機械の設置済みチェック
-execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] align xyz if entity @e[type=item_display, tag=machine, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
-execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] align xyz if entity @e[type=item_display, tag=machine_part, tag=!not_setup, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
+execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] align xyz if entity @e[predicate=beach_house:is_displayed_machine, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
+execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] align xyz if entity @e[predicate=beach_house:is_machine_part, tag=!not_setup, dx=0, dy=0, dz=0] run function beach_house:place/result/already_placed
 
 execute unless entity @s[tag=failed_place] as @e[predicate=beach_house:is_machine_base] run function beach_house:place/place_machines
 execute if entity @s[tag=failed_place, gamemode=!creative] run function beach_house:give/return_machine
