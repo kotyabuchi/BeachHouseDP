@@ -2,10 +2,13 @@ say click
 advancement revoke @s only beach_house:clicked_machine
 
 #region 撤去
-tag @s[nbt={SelectedItem:{tag:{type:removal_tool}}}] add remover
-execute as @s[tag=remover] run say clicked with removal tool
-
-execute as @e[predicate=beach_house:is_clicked_interaction, tag=machine] at @s on target if entity @s[tag=remover] align xyz as @e[type=item_display, tag=machine, dx=0, dy=0, dz=0] run function beach_house:removal/removal_machines
+execute if items entity @s weapon.* minecraft:diamond_sword[minecraft:custom_data~{tool_type:removal}] run tag @s add remover
+execute as @e[predicate=beach_house:is_clicked_interaction, tag=machine] at @s on target if entity @s[tag=remover] run say try removal
+# 横長の機械をクリックした場合
+execute as @e[predicate=beach_house:is_clicked_interaction, tag=machine] at @s on target if entity @s[tag=remover] align xyz positioned ~ ~-0.5 ~ at @e[predicate=beach_house:is_machine_part, dx=0, dy=1, dz=0] positioned ^ ^-0.3 ^1 align xyz as @e[predicate=beach_house:is_displayed_machine, dx=0, dy=1, dz=0] at @s align xyz positioned ~ ~-0.3 ~ if function beach_house:removal/removal_machines as @a[tag=removal] run function beach_house:removal/result/can_not_removal_working_machine
+# 機械をクリックした場合
+execute as @e[predicate=beach_house:is_clicked_interaction, tag=machine] at @s on target if entity @s[tag=remover] align xyz positioned ~ ~-0.5 ~ as @e[predicate=beach_house:is_displayed_machine, dx=0, dy=1, dz=0] at @s align xyz positioned ~ ~-0.3 ~ if function beach_house:removal/removal_machines as @a[tag=removal] run function beach_house:removal/result/can_not_removal_working_machine
+tag @s remove remover
 #endregion
 
 #region 機械別アクション

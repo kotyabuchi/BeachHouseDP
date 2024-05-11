@@ -1,0 +1,1 @@
+tellraw @s {"text": "稼働中の機械は撤去できません。", "color": "red"}

@@ -1,0 +1,1 @@
+give @s minecraft:diamond_sword[minecraft:item_name='{"text": "解体レンチ"}',minecraft:lore=['["",{"text":"機械の撤去に使用するレンチ。","italic":false,"color":"gray"}]','[""]','["",{"text":"使用対象: ","italic":false,"color":"gray"},{"text":"機械","italic":false,"color":"white"}]'],minecraft:hide_additional_tooltip={},minecraft:custom_data={type:tool, tool_type:removal},minecraft:custom_model_data=1]
