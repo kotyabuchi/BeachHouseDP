@@ -12,7 +12,7 @@
               ],
               "components": {
                 "minecraft:custom_data": {
-                  "type": "placeable"
+                  "type":"machine"
                 }
               }
             }
