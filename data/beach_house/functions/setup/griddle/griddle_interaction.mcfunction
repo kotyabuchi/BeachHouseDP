@@ -1,6 +1,9 @@
-execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^1.05 ^-0.5 ^-0.033 summon minecraft:interaction run data modify entity @s Tags set value [griddle,interaction,machine,right]
-execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^0.5 ^-0.5 ^-0.033 summon minecraft:interaction run data modify entity @s Tags set value [griddle,interaction,machine,center]
-execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^-0.05 ^-0.5 ^-0.033 summon minecraft:interaction run data modify entity @s Tags set value [griddle,interaction,machine,left]
+execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^1.04 ^-0.5 ^-0.032 summon minecraft:interaction run data modify entity @s Tags set value [griddle,interaction,machine,right]
+execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^0.5 ^-0.5 ^-0.032 summon minecraft:interaction run data modify entity @s Tags set value [griddle,interaction,machine,center]
+execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^-0.04 ^-0.5 ^-0.032 summon minecraft:interaction run data modify entity @s Tags set value [griddle,interaction,machine,left]
 
-execute as @e[predicate=beach_house:machines/griddle/is_griddle_interaction] run data modify entity @s width set value 0.85
+execute as @e[predicate=beach_house:machines/griddle/is_griddle_interaction] run data modify entity @s width set value 0.81
 execute as @e[predicate=beach_house:machines/griddle/is_griddle_interaction] run data modify entity @s height set value 0.3
+execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^1.04 ^-0.5 ^-0.032 run data modify entity @e[predicate=beach_house:machines/griddle/is_griddle_interaction, distance=..0.1, limit=1] Rotation[0] set from entity @s Rotation[0]
+execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^0.5 ^-0.5 ^-0.032 run data modify entity @e[predicate=beach_house:machines/griddle/is_griddle_interaction, distance=..0.1, limit=1] Rotation[0] set from entity @s Rotation[0]
+execute as @e[predicate=beach_house:machines/griddle/is_griddle] at @s positioned ^-0.04 ^-0.5 ^-0.032 run data modify entity @e[predicate=beach_house:machines/griddle/is_griddle_interaction, distance=..0.1, limit=1] Rotation[0] set from entity @s Rotation[0]

@@ -1,0 +1,2 @@
+execute as @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_finished_machine] at @s run function beach_house:click_action/juice_server/take_juice
+execute if items entity @s weapon.* minecraft:stick[minecraft:custom_data~{type:juice_glass}] as @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/juice_server/is_juice_server_tap, tag=!placed_glass] at @s run function beach_house:click_action/juice_server/pour_juice

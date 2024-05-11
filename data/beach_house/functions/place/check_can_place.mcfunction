@@ -13,8 +13,10 @@ execute if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicat
 execute unless entity @s[tag=failed_place] at @e[predicate=beach_house:is_machine_base, tag=half] positioned ~ ~-1 ~ unless block ~ ~ ~ #beach_house:half_machine_placeable run function beach_house:place/result/can_not_place_invalid_block
 # 設置位置の土台チェック
 execute unless entity @s[tag=failed_place] at @e[predicate=beach_house:is_machine_base, tag=!half] positioned ~ ~-1 ~ unless block ~ ~ ~ #beach_house:machine_placeable run function beach_house:place/result/can_not_place_invalid_block
+# 横長の半ブロ機械の土台チェック
+execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame, tag=half] at @e[predicate=beach_house:is_machine_part, tag=not_setup] positioned ~ ~-1 ~ unless block ~ ~ ~ #beach_house:half_machine_placeable run function beach_house:place/result/can_not_place_invalid_block
 # 横長の機械の土台チェック
-execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] positioned ~ ~-1 ~ unless block ~ ~ ~ #beach_house:machine_placeable run function beach_house:place/result/can_not_place_invalid_block
+execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame, tag=!half] at @e[predicate=beach_house:is_machine_part, tag=not_setup] positioned ~ ~-1 ~ unless block ~ ~ ~ #beach_house:machine_placeable run function beach_house:place/result/can_not_place_invalid_block
 
 # 横長の機械の空間チェック
 execute unless entity @s[tag=failed_place] if entity @e[predicate=beach_house:is_wide_mechine_frame] at @e[predicate=beach_house:is_machine_part, tag=not_setup] unless block ~ ~ ~ air run function beach_house:place/result/can_not_place_in_block

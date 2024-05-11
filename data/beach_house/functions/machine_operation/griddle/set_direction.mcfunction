@@ -1,0 +1,2 @@
+execute as @e[tag=stick_food, tag=not_setup_direction] at @s run data modify entity @s Rotation[0] set from entity @e[predicate=beach_house:machines/griddle/is_griddle_plate, sort=nearest, limit=1] Rotation[0]
+execute as @e[tag=stick_food, tag=not_setup_direction] run tag @s remove not_setup_direction

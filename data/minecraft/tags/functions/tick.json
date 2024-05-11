@@ -1,3 +1,6 @@
 {
-	"values": ["beach_house:increase_working_machine_progress"]
+	"values": [
+		"beach_house:increase_working_machine_progress",
+		"beach_house:animation/grilling"
+	]
 }

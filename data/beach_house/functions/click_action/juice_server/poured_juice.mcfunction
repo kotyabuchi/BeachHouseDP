@@ -1,0 +1,7 @@
+execute as @e[predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_working_machine, scores={progress=60..}] run tag @s add finished
+execute as @e[predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_finished_machine] run tag @s remove working
+execute as @e[predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_finished_machine] run scoreboard players reset @s
+
+execute at @e[predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_finished_machine] positioned ~ ~0.5 ~ as @e[type=item_display, tag=juice_glass, distance=..0.1] run data modify entity @s Tags set value [juice]
+execute at @e[predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_finished_machine,tag=grape] positioned ~ ~0.5 ~ as @e[type=item_display, tag=juice, distance=..0.1] run data modify entity @s item set value {id: "minecraft:potion", components:{"minecraft:custom_model_data": 1}}
+execute at @e[predicate=beach_house:machines/juice_server/is_juice_server_tap, predicate=beach_house:machines/is_finished_machine,tag=water_melon] positioned ~ ~0.5 ~ as @e[type=item_display, tag=juice, distance=..0.1] run data modify entity @s item set value {id: "minecraft:potion", components:{"minecraft:custom_model_data": 2}}

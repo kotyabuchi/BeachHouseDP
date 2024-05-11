@@ -1,0 +1,1 @@
+execute as @e[predicate=beach_house:machines/griddle/is_griddle_plate, tag=working] at @s align xyz positioned ~ ~0.5 ~ unless entity @e[type=item_display, tag=food, dx=0, dy=0, dz=0] run tag @s remove working

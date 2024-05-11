@@ -1,0 +1,3 @@
+advancement revoke @s only beach_house:clicked_stick_food
+execute at @e[predicate=beach_house:is_clicked_interaction, tag=flip] as @e[tag=waiting_flip, sort=nearest, limit=1] at @s run function beach_house:click_action/griddle/grill_food/flip
+execute at @e[predicate=beach_house:is_clicked_interaction, tag=grilled] as @e[type=item_display, tag=food, tag=grilled, sort=nearest, limit=1] run function beach_house:click_action/griddle/grill_food/get_grillded_food

@@ -1,0 +1,1 @@
+give @s minecraft:apple[minecraft:item_name='{"text": "焼きとうもろこし"}',minecraft:lore=['["",{"text":"美味しそうに焼けたとうもろこし。","italic":false,"color":"gray"}]'],minecraft:hide_additional_tooltip={},minecraft:custom_data={type:food, food_style:stick, food_type:corn},minecraft:custom_model_data=16]

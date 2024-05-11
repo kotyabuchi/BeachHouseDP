@@ -14,7 +14,7 @@ execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clic
 # Juice Server
 execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/juice_server/is_juice_server_tap] run function beach_house:click_action/juice_server/tap 
 # Griddle
-# execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, tag=griddle] 
+execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/griddle/is_griddle_plate] run function beach_house:click_action/griddle/plate 
 # Cooler Box
 # execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, tag=cooler_box] 
 #endregion
