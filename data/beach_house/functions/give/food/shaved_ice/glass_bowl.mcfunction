@@ -1,0 +1,1 @@
+give @s minecraft:stick[minecraft:item_name='{"text": "ガラスの器"}',minecraft:lore=['["",{"text":"ガラスで出来た器。","italic":false,"color":"gray"}]','[""]','["",{"text":"使用対象: ","italic":false,"color":"gray"},{"text":"かき氷機","italic":false,"color":"white"}]'],minecraft:hide_additional_tooltip={},minecraft:custom_data={type:glass_bowl},minecraft:custom_model_data=5]

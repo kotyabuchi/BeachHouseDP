@@ -1,0 +1,3 @@
+execute if entity @s[type=player] run tag @s add give_machine
+give @a[tag=give_machine] minecraft:item_frame[minecraft:item_name='{"text": "かき氷機"}',minecraft:lore=['["",{"text":"氷を削ってかき氷を作れる。","italic":false,"color":"gray"}]','[""]','["",{"text":"設置可能: ","italic":false,"color":"gray"},{"text":"作業台","italic":false,"color":"white"}]'],minecraft:hide_additional_tooltip={},entity_data={id:"minecraft:item_frame",Fixed:true,Silent:true,Tags:[machine,desktop_machine,shaved_ice_machine]},minecraft:can_place_on={show_in_tooltip:false,predicates:[{blocks:"minecraft:dark_oak_planks"}]},minecraft:custom_model_data=3,minecraft:custom_data={type:machine}]
+execute as @a[tag=give_machine] run tag @s remove give_machine

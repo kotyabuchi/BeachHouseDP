@@ -12,6 +12,9 @@ tag @s remove remover
 #endregion
 
 #region 機械別アクション
+# Shaved Ice Machine
+execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/shaved_ice_machine/is_ice_interaction] run function beach_house:click_action/shaved_ice_machine/ice
+execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/shaved_ice_machine/is_bowl_interaction] run function beach_house:click_action/shaved_ice_machine/bowl
 # Beer Server
 execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/beer_server/is_beer_server_tap] run function beach_house:click_action/beer_server/tap
 # Juice Server
@@ -21,4 +24,6 @@ execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clic
 # Cooler Box
 # execute unless entity @s[tag=remover] if entity @e[predicate=beach_house:is_clicked_interaction, tag=cooler_box] 
 #endregion
+
+# クリック情報を削除
 execute as @e[predicate=beach_house:is_clicked_interaction, tag=machine] run data remove entity @s interaction

@@ -1,0 +1,1 @@
+give @s minecraft:item_frame[minecraft:item_name='{"text": "らむねシロップ"}',minecraft:lore=['["",{"text":"らむね味のシロップ。","italic":false,"color":"gray"}]','[""]','["",{"text":"使用対象: ","italic":false,"color":"gray"},{"text":"かき氷","italic":false,"color":"white"}]'],minecraft:hide_additional_tooltip={},minecraft:custom_data={type:syrup,shaved_ice_model_data:8},minecraft:custom_model_data=10]

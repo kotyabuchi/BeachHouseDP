@@ -17,7 +17,7 @@
       }
     },
     "rewards": {
-      "function": "beach_house:clicked_machine"
+      "function": "beach_house:click_action/clicked_machine"
     }
   }
   

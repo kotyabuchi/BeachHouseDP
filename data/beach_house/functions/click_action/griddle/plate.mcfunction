@@ -1,5 +1,5 @@
 # 持っている食材が棒付き
-execute if items entity @s weapon.mainhand minecraft:apple[minecraft:custom_data~{food_style:stick}] as @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/griddle/is_griddle_plate] at @s run tag @s add clicked_with_stick_food
+execute if items entity @s weapon.mainhand minecraft:apple[minecraft:custom_data~{food_style:stick}] as @e[predicate=beach_house:is_clicked_interaction, predicate=beach_house:machines/griddle/is_griddle_plate] run tag @s add clicked_with_stick_food
 # まだ鉄板で何も焼いていない
 execute as @e[predicate=beach_house:machines/griddle/is_griddle_plate, tag=clicked_with_stick_food] at @s align xyz positioned ~ ~0.5 ~ unless entity @e[type=item_display, tag=food, dx=0, dy=0, dz=0] at @s positioned ^0.25 ^0.06 ^ run function beach_house:click_action/griddle/grill_food/put_stick_food
 # まだ右で焼いていない

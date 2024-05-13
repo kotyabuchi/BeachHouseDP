@@ -1,3 +1,6 @@
+# Shaved Ive Machine
+function beach_house:setup/shaved_ice_machine/glass_bowl
+function beach_house:setup/shaved_ice_machine/ice
 # Beer Server
 function beach_house:setup/beer_server/beer_server_interaction
 function beach_house:setup/beer_server/tap
