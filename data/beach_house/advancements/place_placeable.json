@@ -10,9 +10,9 @@
               "items": [
                 "minecraft:item_frame"
               ],
-              "components": {
+              "predicates": {
                 "minecraft:custom_data": {
-                  "type":"machine"
+                  "type":"placeable"
                 }
               }
             }

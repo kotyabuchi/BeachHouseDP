@@ -1,0 +1,2 @@
+execute if entity @s[tag=blue] as @e[predicate=beach_house:placeable/is_not_init_placeable] run data modify entity @s item set value {count:1, id:"minecraft:item_frame", components:{"minecraft:custom_model_data":10}}
+execute if entity @s[tag=blue] as @e[predicate=beach_house:placeable/is_not_init_placeable] run data merge entity @s {transformation:{translation:[0.25f,0.5f,-0.25f]}}
