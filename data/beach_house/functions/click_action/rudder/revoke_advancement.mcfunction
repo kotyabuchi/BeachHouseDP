@@ -1,0 +1,1 @@
+advancement revoke @a only beach_house:clicked_rudder

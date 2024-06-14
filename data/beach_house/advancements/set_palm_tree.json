@@ -1,0 +1,23 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:interaction",
+                "nbt": "{Tags:[set_palm_tree]}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "beach_house:set_palm_tree"
+    }
+  }
+  
